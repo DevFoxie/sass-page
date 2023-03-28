@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import 'partials/colors.scss';
+
+@import 'partials/degrade-mixin.scss';
+
+html,
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+    font-size: 16px;
+}
+
+.home {
+    min-height: 500px;
+    height: 100vh;
+    padding: 4rem 4rem;
+    box-sizing: border-box;
+    @include radial-gradient($primary-color, $secondary-color);
+    display: flex;
+    flex-direction: column;
+
+    &.welcome h1 {
+        border-bottom: 2px dotted $secondary-color;
+        margin: 0 0 2rem 0;
+        padding: 0 0 2rem 0;
+        font-size: 3rem;
+    }
+
+    &.welcome {
+        margin: auto;
+        width: 100%;
+        text-align: center;
+        color: $secondary-color;
+    }
+}
+
+.logo {
+    position: absolute;
+    font-size: 1.6rem;
+    line-height: 3rem;
+    padding: 10px 4rem;
+
+    &.span {
+        position: fixed;
+        display: inline-block;
+        top: 10px;
+        left: 10px;
+        color: $primary-color;
+        background-color: $secondary-color;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        border-radius: 50%;
+        border: 1px solid $primary-color;
+    }
+}
+
+.btn {
+    border: 1px solid $secondary-color;
+    color: $secondary-color;
+    padding: 0.5rem 1rem;
+    margin: 0 0.3rem;
+    border-radius: 0.2rem;
+    text-decoration: none;
+}
+
+.services {
+    padding: 4rem 4rem;
+
+    &>div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &.h2 {
+        color: $primary-color;
+    }
+
+    &.service-block .service-img {
+        background-color: darken($secondary-color, 20%);
+        height: 150px;
+    }
+
+    &.service-block {
+        width: 30%;
+        min-width: 280px;
+        margin: 1.5%;
+        box-sizing: border-box;
+    }
+
+    &.service-block h3 {
+        color: $primary-color;
+        text-align: center;
+    }
+}
+
+.contacts {
+    padding: 4rem 4rem;
+    background-color: darken($secondary-color, 20%);
+
+    &form {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    &form label {
+        margin: 1rem 0;
+    }
+
+    &form input,
+    .contacts form textarea {
+        border: 1px solid $primary-color;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    &form textarea {
+        height: 15rem;
+    }
+
+    &form input[type="submit"] {
+        background-color: $primary-color;
+        width: 25%;
+        margin: 1rem auto;
+    }
+}
+
+footer {
+
+    padding: 1rem 4rem;
+    background-color: darken($primary-color, 20%);
+    color: $primary-color;
+    text-align: center;
+    font-size: 0.8rem;
+}

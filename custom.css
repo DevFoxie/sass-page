@@ -42,11 +42,6 @@ body {
     color: #fff;
 }
 
-.home .welcome {
-    text-align: center;
-    color: #fff;
-}
-
 .btn {
     border: 1px solid #fff;
     color: #fff;
@@ -133,9 +128,10 @@ body {
   }
 
   footer {
-    padding: 1rem 4rem;
+  
+   padding: 1rem 4rem;
     background-color: #004a54;
     color: #008da0;
     text-align: center;
     font-size: 0.8rem;
-  } 
+  }
